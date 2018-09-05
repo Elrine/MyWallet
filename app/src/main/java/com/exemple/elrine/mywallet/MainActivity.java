@@ -1,17 +1,28 @@
 package com.exemple.elrine.mywallet;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity implements View.OnTouchListener {
+
+    TextView text = null;
+    Button button = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView text = new TextView(this);
-        text.setText("Bonjour, vous me devez 1 000 000€.");
-        setContentView(text);
+        button = (Button) findViewById(R.id.button);
+        button.setOnTouchListener(this);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        button.setTextSize(Math.abs(event.getX() - button.getWidth() / 2) + Math.abs(event.getY() - button.getHeight() / 2));
+        return true;
     }
 }
