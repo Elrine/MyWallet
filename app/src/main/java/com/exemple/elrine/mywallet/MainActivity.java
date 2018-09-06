@@ -1,13 +1,14 @@
 package com.exemple.elrine.mywallet;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements View.OnTouchListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     TextView text = null;
     Button button = null;
@@ -17,12 +18,12 @@ public class MainActivity extends Activity implements View.OnTouchListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button);
-        button.setOnTouchListener(this);
+        button.setOnClickListener(this);
     }
 
     @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        button.setTextSize(Math.abs(event.getX() - button.getWidth() / 2) + Math.abs(event.getY() - button.getHeight() / 2));
-        return true;
+    public void onClick(View v) {
+        Intent gameActivity = new Intent(MainActivity.this, GameActivity.class);
+        startActivity(gameActivity);
     }
 }
