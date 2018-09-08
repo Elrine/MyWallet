@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "753263218543",
+    "firebase_url": "https://mywallet-11ddb.firebaseio.com",
+    "project_id": "mywallet-11ddb",
+    "storage_bucket": "mywallet-11ddb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753263218543:android:29851971a6ec9663",
+        "android_client_info": {
+          "package_name": "com.exemple.elrine.mywallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753263218543-c667illil71hpduefq1por0usadfravh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm03c2ZNsY3WHOuzvMkIHygC8ItKfJA7k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
